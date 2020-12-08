@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<!-- <html xmlns:th="https://www.thymeleaf.org/"> -->
-<html>
+<html xmlns:th="xmlns:th="http://www.thymeleaf.org"">
+<!-- <html> -->
 <!-- https://www.thymeleaf.org/ -->
 <head>
 <meta charset="UTF-8">
 <title>Register</title>
 </head>
 <body>
-	<p style="text-align: center;">Register page</p>
-	<form action="#" method="post">
-		<div class="row">
-			<label>Username</label>
-			<input type="text" >
-		</div>
-	</form>
-	<!-- <form action="#" th:action="/register" th:object="user" method="post">
-		<div class="row">
-			<label>Username</label>
-			<input type="text" th:field="*{username}">
-		</div>
-	</form> -->
+	<div align="center">
+		<p style="text-align: center;">Register page</p>
+		<form action="#" method="post" th:action="@{/register}" th:object="${user}">
+			<div class="row">
+				<label>Username</label>
+				<input type="text" th:field="*{username}"> <br> <br>
+				<button>SUBMIT</button>
+			</div>
+		</form>
+		<!-- <form action="#" th:action="/register" th:object="user" method="post">
+			<div class="row">
+				<label>Username</label>
+				<input type="text" th:field="*{username}">
+			</div>
+		</form> -->
+	</div>
 </body>
 </html>
