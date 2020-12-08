@@ -1,5 +1,8 @@
 package com.example.demo.controllers;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +30,8 @@ public class Register {
 		User user =new User();
 		model.addAttribute("user", user);
 		
+		List<String> list = Arrays.asList("shanth5100", "shanthANU", "shanthAMMA");
+		model.addAttribute("usernames", list);
 		return "register";
 	}
 	
@@ -34,7 +39,7 @@ public class Register {
 //	@PostMapping("/register")
 //	@RequestMapping
 	public String submit(@ModelAttribute("user") User user) {
-		System.out.println(user);
+		System.out.println(user.getName());
 //		User user =new User();
 //		model.addAttribute("user", user);
 		
