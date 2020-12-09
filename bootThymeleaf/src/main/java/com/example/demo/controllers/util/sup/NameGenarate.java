@@ -1,12 +1,7 @@
-package com.example.demo.model.util;
+package com.example.demo.controllers.util.sup;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
-
-@MappedSuperclass
 public class NameGenarate extends IDGenarate {
 	
-	@Column(length = 70)
 	private String name;
 
 	public String getName() {

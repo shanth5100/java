@@ -1,12 +1,7 @@
-package com.example.demo.model.util;
+package com.example.demo.controllers.util.sup;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
-
-@MappedSuperclass
 public class UsernameGenarate extends EmailGenarate {
 	
-	@Column(nullable = false, unique = true, length = 30)
 	private String username;
 
 	public String getUsername() {
