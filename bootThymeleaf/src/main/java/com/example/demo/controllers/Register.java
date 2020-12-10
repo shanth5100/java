@@ -34,7 +34,7 @@ public class Register {
 		User user =new User();
 		model.addAttribute("user", user);
 		
-		List<String> list = Arrays.asList("shanth5100", "shanthANU", "shanthAMMA");
+		List<String> list = Arrays.asList("shanth5100", "shanthANU", "shanthAMMA", "123456");
 		model.addAttribute("usernames", list);
 		return "register";
 	}
@@ -55,6 +55,7 @@ public class Register {
 		try {
 			usercreated = userDao.save(userEntity);
 			System.out.println(user.getName());
+//			return "redirect:/error";
 			return "register_success";
 		} catch (Exception e) {
 			return "redirect:/error";
