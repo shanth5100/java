@@ -16,27 +16,37 @@ import com.example.demo.model.User;
 @RequestMapping("/user")
 public class UserController {
 	
+	public UserController() {
+		System.out.println("Helllo User controller");
+	}
+	
 	@Autowired
 	UserDao userDao;
 
 	@GetMapping("/list")
 	public String getAllUsers(Model model) {
-		List<User> usersList =  userDao.findAll();
-		List<com.example.demo.controllers.util.User> usersListCon = new LinkedList<com.example.demo.controllers.util.User>();
-		if (!usersList.isEmpty()) {
-			for (User user : usersList) {
-				com.example.demo.controllers.util.User controllerUser = new com.example.demo.controllers.util.User();
-				
-				controllerUser.setUsername(user.getUsername());
-				controllerUser.setId(user.getId());
-				controllerUser.setPassword(user.getPassword());
-				controllerUser.setName(user.getName());
-				controllerUser.setEmail(user.getEmail());
-				
-				usersListCon.add(controllerUser);
+		try {
+			List<User> usersList =  userDao.findAll();
+			if (!usersList.isEmpty()) {
+				List<com.example.demo.controllers.util.User> usersListCon = new LinkedList<com.example.demo.controllers.util.User>();
+				for (User user : usersList) {
+					com.example.demo.controllers.util.User controllerUser = new com.example.demo.controllers.util.User();
+					
+					controllerUser.setUsername(user.getUsername());
+					controllerUser.setId(user.getId());
+					controllerUser.setPassword(user.getPassword());
+					controllerUser.setName(user.getName());
+					controllerUser.setEmail(user.getEmail());
+					
+					usersListCon.add(controllerUser);
+				}
+				model.addAttribute("userList", usersListCon);
 			}
-			model.addAttribute("userList", usersListCon);
+			return "user_list";
+//			return "error";
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			return "redirect:/error";
 		}
-		return "error";
 	}
 }

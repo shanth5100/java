@@ -34,7 +34,7 @@ public class Register {
 		User user =new User();
 		model.addAttribute("user", user);
 		
-		List<String> list = Arrays.asList("shanth5100", "shanthANU", "shanthAMMA", "123456");
+		List<String> list = Arrays.asList("shanth5100", "shanth5", "shant5", "shanthANU", "shanthAMMA", "123456", "12345", "1234", "123", "132");
 		model.addAttribute("usernames", list);
 		return "register";
 	}
