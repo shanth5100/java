@@ -43,7 +43,7 @@ public class UserController {
 				model.addAttribute("userList", usersListCon);
 			}
 			return "user_list";
-//			return "error";
+			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 			return "redirect:/error";
