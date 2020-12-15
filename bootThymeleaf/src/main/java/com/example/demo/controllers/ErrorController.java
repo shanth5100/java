@@ -47,10 +47,10 @@ public class ErrorController implements org.springframework.boot.web.servlet.err
 				errorPage = "error/403";
 				LOGGER.error("Error 403");
 			} else if (statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
-					pageTitle =  "INTERNAL SERVER ERROR";
-					errorPage = "error/500";
-					LOGGER.error("Error 500");
-				}
+				pageTitle =  "INTERNAL SERVER ERROR";
+				errorPage = "error/500";
+				LOGGER.error("Error 500");
+			}
 			
 		} 
 		

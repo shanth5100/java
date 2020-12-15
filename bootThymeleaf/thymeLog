@@ -449,3 +449,67 @@ java.lang.NullPointerException: null
 	at java.base/java.lang.Thread.run(Thread.java:835) ~[na:na]
 
 2020-12-14 20:31:15.744 ERROR 2185 --- [http-nio-5008-exec-3] c.e.demo.controllers.ErrorController     : Error 500
+2020-12-14 20:33:58.861  INFO 2185 --- [Thread-58] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-14 20:33:58.862  INFO 2185 --- [Thread-58] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-14 20:33:58.862  INFO 2185 --- [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2020-12-14 20:34:00.253  INFO 2185 --- [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2020-12-14 20:34:00.363  INFO 2185 --- [restartedMain] c.example.demo.BootThymeleafApplication  : Starting BootThymeleafApplication using Java 12.0.1 on dev1 with PID 2185 (/Users/dev1/prashanth/java/java/java/bootThymeleaf/target/classes started by dev1 in /Users/dev1/prashanth/java/java/java/bootThymeleaf)
+2020-12-14 20:34:00.364  INFO 2185 --- [restartedMain] c.example.demo.BootThymeleafApplication  : No active profile set, falling back to default profiles: default
+2020-12-14 20:34:00.530  INFO 2185 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-14 20:34:00.541  INFO 2185 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+2020-12-14 20:34:00.623  INFO 2185 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5008 (http)
+2020-12-14 20:34:00.624  INFO 2185 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-14 20:34:00.624  INFO 2185 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-14 20:34:00.665  INFO 2185 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-12-14 20:34:00.666  INFO 2185 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-14 20:34:00.666  INFO 2185 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 300 ms
+2020-12-14 20:34:00.703  INFO 2185 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-14 20:34:00.707  INFO 2185 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-14 20:34:00.712  INFO 2185 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2020-12-14 20:34:00.724  WARN 2185 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-14 20:34:00.766  INFO 2185 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-14 20:34:00.824  INFO 2185 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-14 20:34:00.838  INFO 2185 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5008 (http) with context path ''
+2020-12-14 20:34:00.839  INFO 2185 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-14 20:34:02.108  INFO 2185 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2020-12-14 20:34:02.108  INFO 2185 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-14 20:34:02.425  INFO 2185 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-14 20:34:02.426  INFO 2185 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-14 20:34:02.445  INFO 2185 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-14 20:34:02.448  INFO 2185 --- [restartedMain] c.example.demo.BootThymeleafApplication  : Started BootThymeleafApplication in 2.117 seconds (JVM running for 4047.899)
+2020-12-14 20:34:02.449  INFO 2185 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-14 21:08:42.693  INFO 2185 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-14 21:08:42.695  INFO 2185 --- [Thread-63] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-14 21:08:42.695  INFO 2185 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2020-12-14 21:08:44.055  INFO 2185 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2020-12-14 21:08:44.162  INFO 2185 --- [restartedMain] c.example.demo.BootThymeleafApplication  : Starting BootThymeleafApplication using Java 12.0.1 on dev1 with PID 2185 (/Users/dev1/prashanth/java/java/java/bootThymeleaf/target/classes started by dev1 in /Users/dev1/prashanth/java/java/java/bootThymeleaf)
+2020-12-14 21:08:44.162  INFO 2185 --- [restartedMain] c.example.demo.BootThymeleafApplication  : No active profile set, falling back to default profiles: default
+2020-12-14 21:08:44.309  INFO 2185 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-14 21:08:44.316  INFO 2185 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
+2020-12-14 21:08:44.403  INFO 2185 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5008 (http)
+2020-12-14 21:08:44.404  INFO 2185 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-14 21:08:44.404  INFO 2185 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-14 21:08:44.445  INFO 2185 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-12-14 21:08:44.445  INFO 2185 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-14 21:08:44.446  INFO 2185 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 282 ms
+2020-12-14 21:08:44.486  INFO 2185 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-14 21:08:44.491  INFO 2185 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-14 21:08:44.498  INFO 2185 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2020-12-14 21:08:44.508  WARN 2185 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-14 21:08:44.548  INFO 2185 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-14 21:08:44.601  INFO 2185 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-14 21:08:44.616  INFO 2185 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5008 (http) with context path ''
+2020-12-14 21:08:44.616  INFO 2185 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-14 21:08:45.868  INFO 2185 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2020-12-14 21:08:45.869  INFO 2185 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-14 21:08:46.287  INFO 2185 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-14 21:08:46.288  INFO 2185 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-14 21:08:46.300  INFO 2185 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-14 21:08:46.303  INFO 2185 --- [restartedMain] c.example.demo.BootThymeleafApplication  : Started BootThymeleafApplication in 2.168 seconds (JVM running for 6131.665)
+2020-12-14 21:08:46.304  INFO 2185 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-14 21:24:00.075  WARN 2185 --- [HikariPool-14 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Thread starvation or clock leap detected (housekeeper delta=9m14s44ms).
+2020-12-14 21:50:06.884  INFO 2185 --- [RMI TCP Connection(140)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-12-14 21:50:06.943  INFO 2185 --- [RMI TCP Connection(140)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-14 21:50:06.943  INFO 2185 --- [RMI TCP Connection(140)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-14 21:50:06.944  INFO 2185 --- [RMI TCP Connection(140)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2020-12-14 21:50:08.305  INFO 2185 --- [RMI TCP Connection(140)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
