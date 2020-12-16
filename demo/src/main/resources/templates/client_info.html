@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Pdf Genarate</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	
+	<script type="text/javascript">
+		/* */
+		
+		/* $(document).ready(function(){
+		    var next = 1;
+		    $(".add-more").click(function(e){
+		        e.preventDefault();
+		        var addto = "#field" + next;
+		        var addRemove = "#field" + (next);
+		        next = next + 1;
+		        var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
+		        var newInput = $(newIn);
+		        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+		        var removeButton = $(removeBtn);
+		        $(addto).after(newInput);
+		        $(addRemove).after(removeButton);
+		        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+		        $("#count").val(next);  
+		        
+		            $('.remove-me').click(function(e){
+		                e.preventDefault();
+		                var fieldNum = this.id.charAt(this.id.length-1);
+		                var fieldID = "#field" + fieldNum;
+		                $(this).remove();
+		                $(fieldID).remove();
+		            });
+		    });
+		});  */
+		
+		
+		
+	</script>
+	</head>
+	<body class="container">
+		<div>
+		
+			<!-- <a th:href="/clientInfo" >Add client details to genarate Invoice</a> -->
+			<p style="text-align: center;">Hello PDF </p>
+			<br><br>
+			<span>Name : </span><span th:text="${client.client_name}"></span><br>
+			<span>Name : </span><span th:text="${clientUsage}"></span><br>
+			
+			<form action="#" method="post" th:action="@{/genaratePDF}" th:object="${clientInfo}">
+				
+				<div class="row">
+					<label>Names</label>
+					<!-- <input type="text" th:field="${client.client_name}"> -->
+					<input type="text" th:field="*{client_name}"> 
+				</div><br>
+				
+				<div th:each="usage,i: ${clientUsage}">
+					<span>Usage : </span><span th:text="${usage.id}"></span><br>
+				</div>
+				
+				
+				<div id="staticFields" class="static-fields">
+					<div class="row">
+						<input type="text" name="item" id="item">
+						<input type="text" name="unit" id="unit">
+						<input type="text" name="unitPrice" id="unitPrice">
+					</div>
+				</div>
+				
+				<div></div> 
+    
+				<div class="input_fields_container">
+			           <button type="button" id="add_more_button" class="btn btn-sm btn-primary add_more_fields">Add More Fields</button>
+			      </div>
+			      
+			      <script type="text/javascript">
+			      	$(document).ready(function() {
+			      		var addButton = $(".add_more_fields");
+			      		var fieldsWrapper = $(".static-fields");
+			      		var count = 1;
+			      		$(addButton).click(function(e) {
+			      			e.preventDefault();
+			      			if (count < 4) {
+			      				var fields = '<div class="row extra-fields"><input type="text" name="item' + 
+			      				count + '" id="item"/> <input type="text" name="unit' + 
+			      				count + '" id="item"/><input type="text" name="unitPrice' + 
+			      				count + '" id="item"/><span ><button id="b1" class="btn remove-fields" type="button">-</button></span><div>';
+			      				
+			      				count ++;
+			      				
+			      				$(fieldsWrapper).append(fields);
+			      			}
+			      		});
+			      		
+			      		/* $().on(); */
+			      		
+			      		$(fieldsWrapper).on("click", ".remove-fields", function(e) {
+			      			/* e.preventDefault(); */
+			      			var index = $(".remove-fields").index(this);
+							$(".extra-fields").eq(index).remove();
+							count--;
+			      		});
+			      		
+			      		/* $(this).parent('div').remove();
+		      			count--; */
+			      		/* $(".remove-fields").click(function(e) {
+			      			e.preventDefault();
+			      			
+			      			var index = $(".remove-fields").index(this);
+							$(".extra-fields").eq(index).remove();
+			      		}); */
+			      	});
+			      </script>
+			      
+			      
+			      <!-- <input type="text" name="name1" id="name11">
+				<input type="text" name="name2" id="name12">
+				<input type="text" name="name3" id="name13">
+				<input type="text" name="name4" id="name14">
+				<input type="text" name="name5" id="name15"> -->
+				
+				<!-- <div id="staticFields" class="static-fields">
+					<div class="row extra-fields">
+						<input type="text" name="item" id="item">
+						<input type="text" name="unit" id="unit">
+						<input type="text" name="unitPrice" id="unitPrice">
+						<span ><button id="b1" class="btn remove-fields" type="button">-</button></span>
+					</div>
+				</div>
+				<div class="input_fields_container">
+			           <button type="button" id="add_more_button" class="btn btn-sm btn-primary add_more_button">Add More Fields</button>
+			      </div>
+				
+				<script type="text/javascript">
+					$(document).on("click", ".add_more_button", function() {
+						var row = $(".extra-fields").eq(0).clone().show();
+						
+						$(".static-fields").append(row);
+					});
+					
+					$(document).on("click", ".remove-fields", function() {
+						var index = $(".remove-fields").index(this);
+						
+						$(".extra-fields").eq(index).remove();
+					});
+				</script> -->
+				
+				
+				<br><button>Submit</button>
+			</form>
+			
+		</div>
+	</body>
+</html>

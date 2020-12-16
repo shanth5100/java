@@ -2,11 +2,67 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Pdf Genarate</title>
+<title>Invoice</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div>
-	<p style="text-align: center;">Hello PDF Genarete </p>
+<div class="container">
+	<p style="text-align: center; font-family: serif; font-size: 16px; background-color: blue;"> <b>INVOICE</b> </p><br>
+	
+	<div class="container row">
+		<div>
+			<label>Invoive Date</label> <br>
+			<span th:text="*{cleientInfo.date}"></span>
+		</div>
+		
+	</div> <br>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<p style="font-size: 12"> <b>From</b> </p>
+				
+				Geekspace Business Center <br>
+				Manjeera Trinity Corporate <br>
+				Hyderabad <br>
+				Telangana, 500018
+				
+			</div>
+			<div class="col-sm-6">
+				<p style="font-size: 12"> <b>To</b> </p>
+				<span th:text="*{cleientInfo.client_name}"></span><br>
+				Geekspace Business Center <br>
+				Manjeera Trinity Corporate <br>
+				Hydearbad <br>
+				Telangana, 500018
+			</div>
+		</div>
+	  <!-- <div class="row">
+	    <div class="col-sm-4">
+	      <h3>Column 1</h3>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	    <div class="col-sm-4">
+	      <h3>Column 2</h3>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	    <div class="col-sm-4">
+	      <h3>Column 3</h3>
+	      <p>Lorem ipsum dolor..</p>
+	    </div>
+	  </div> -->
+	</div>
+	<!-- <div class="row">
+		<div class="col">
+			<p style="font-size: 12"> <b>To</b> </p>
+		</div>
+		<div class="col">
+			<p style="font-size: 12"> <b>To</b> </p>
+		</div>
+	</div> -->
+	
+	
+	
 	<form action="#">
 		<div class="row">
 			<label>Name</label>
@@ -17,7 +73,7 @@
 			<input type="text"> 
 		</div><br>
 		
-		<button>Submit</button>
+		<!-- <button>Submit</button> -->
 	</form>
 	<!-- <form method="post">
 		<div class="row">

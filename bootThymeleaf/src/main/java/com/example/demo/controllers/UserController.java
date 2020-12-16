@@ -26,7 +26,7 @@ public class UserController {
 	@GetMapping("/list")
 	public String getAllUsers(Model model) {
 		try {
-			List<User> usersList =  userDao.findAll();
+			List<User> usersList =  (List<User>) userDao.findAll();
 			if (!usersList.isEmpty()) {
 				List<com.example.demo.controllers.util.User> usersListCon = new LinkedList<com.example.demo.controllers.util.User>();
 				for (User user : usersList) {
