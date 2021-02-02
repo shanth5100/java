@@ -1,0 +1,23 @@
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2021-01-25 18:01:06
+project setup --topLevelPackage com.qwiqapp.demo
+jpa setup --provider HIBERNATE --database MYSQL
+entity jpa --class ~.model.Address
+field string --fieldName address1
+field string --fieldName address2
+field string --fieldName city
+// [failed] field string --fieldName state
+field string --fieldName _state
+field string --fieldName country
+field string --fieldName postCode
+entity jpa --class ~.model.User
+entity jpa --class ~.model.Users
+field string --fieldName name --notNull 
+field string --fieldName username --notNull --unique 
+field string --fieldName email --notNull --unique 
+field string --fieldName password --notNull  
+repository jpa --all
+service --all 
+web mvc setup 
+web mvc view setup --type THYMELEAF 
+web mvc controller --all --responseType THYMELEAF --pathPrefix /api
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2021-01-27 16:22:55

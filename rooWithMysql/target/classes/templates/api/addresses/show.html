@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_address})}|">Show Address - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${address}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_address})}">Show Address</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_address})}">Address data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="address-address1-field" data-z="296059a9">
+            	      <strong data-th-text="#{label_address_address1}">address1</strong>
+                    <span data-th-text="*{{address1}}">address1Value</span>
+         	        </li>
+                  <li id="address-address2-field" data-z="29605d89">
+            	      <strong data-th-text="#{label_address_address2}">address2</strong>
+                    <span data-th-text="*{{address2}}">address2Value</span>
+         	        </li>
+                  <li id="address-city-field" data-z="6ef140e9">
+            	      <strong data-th-text="#{label_address_city}">city</strong>
+                    <span data-th-text="*{{city}}">cityValue</span>
+         	        </li>
+                  <li id="address-_state-field" data-z="23bc4589">
+            	      <strong data-th-text="#{label_address__state}">_state</strong>
+                    <span data-th-text="*{{_state}}">_stateValue</span>
+         	        </li>
+                  <li id="address-country-field" data-z="1ec0cb75">
+            	      <strong data-th-text="#{label_address_country}">country</strong>
+                    <span data-th-text="*{{country}}">countryValue</span>
+         	        </li>
+                  <li id="address-postcode-field" data-z="61d20bc9">
+            	      <strong data-th-text="#{label_address_postcode}">postCode</strong>
+                    <span data-th-text="*{{postCode}}">postCodeValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Address_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('AddressesItemThymeleafController').to('editForm').with('address', address.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Address_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('AddressesCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

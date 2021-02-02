@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-layout}">
+  <head id="head">
+
+    <title data-th-text="#{label_create_entity(#{label_address})}">
+      Create Address - demo - SpringRoo Application</title>
+
+    <!-- DateTimePicker -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" data-th-href="@{/webjars/datetimepicker/build/jquery.datetimepicker.min.css}" />
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!-- CONTAINER -->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content">
+        <div class="container-fluid content" data-th-with="collectionLink=${@linkBuilder.of('AddressesCollectionThymeleafController')}">
+
+          <h1 data-th-text="#{label_create_entity(#{label_address})}">Create Address</h1>
+
+          <!-- FORM -->
+          <form class="form-horizontal validate" method="POST" data-th-object="${address}" data-th-action="${collectionLink.to('create').with('address', address.id)}">
+
+            <fieldset id="containerFields">
+              <legend class="sr-only" data-th-text="#{label_data_entity(#{label_address})}">Address data </legend>
+
+<div class="form-group has-error has-feedback" data-z="296059a9" id="address-address1-field" data-th-classappend="${#fields.hasErrors('address1')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="address1" class="col-md-3 control-label" data-th-text="#{label_address_address1}">address1</label>
+  <div class="col-md-6">
+    <input id="address1" name="address1" data-th-value="*{{address1}}" type="text" class="form-control" placeholder="address1" data-th-placeholder="#{label_address_address1}" data-toggle="tooltip" aria-describedby="address1Status" />
+      <span data-th-classappend="${#fields.hasErrors('address1')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('address1')}" aria-hidden="true"></span>
+      <span id="address1-error" class="help-block" data-th-if="${#fields.hasErrors('address1')}" data-th-errors="*{address1}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="29605d89" id="address-address2-field" data-th-classappend="${#fields.hasErrors('address2')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="address2" class="col-md-3 control-label" data-th-text="#{label_address_address2}">address2</label>
+  <div class="col-md-6">
+    <input id="address2" name="address2" data-th-value="*{{address2}}" type="text" class="form-control" placeholder="address2" data-th-placeholder="#{label_address_address2}" data-toggle="tooltip" aria-describedby="address2Status" />
+      <span data-th-classappend="${#fields.hasErrors('address2')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('address2')}" aria-hidden="true"></span>
+      <span id="address2-error" class="help-block" data-th-if="${#fields.hasErrors('address2')}" data-th-errors="*{address2}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="6ef140e9" id="address-city-field" data-th-classappend="${#fields.hasErrors('city')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="city" class="col-md-3 control-label" data-th-text="#{label_address_city}">city</label>
+  <div class="col-md-6">
+    <input id="city" name="city" data-th-value="*{{city}}" type="text" class="form-control" placeholder="city" data-th-placeholder="#{label_address_city}" data-toggle="tooltip" aria-describedby="cityStatus" />
+      <span data-th-classappend="${#fields.hasErrors('city')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('city')}" aria-hidden="true"></span>
+      <span id="city-error" class="help-block" data-th-if="${#fields.hasErrors('city')}" data-th-errors="*{city}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="23bc4589" id="address-_state-field" data-th-classappend="${#fields.hasErrors('_state')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="_state" class="col-md-3 control-label" data-th-text="#{label_address__state}">_state</label>
+  <div class="col-md-6">
+    <input id="_state" name="_state" data-th-value="*{{_state}}" type="text" class="form-control" placeholder="_state" data-th-placeholder="#{label_address__state}" data-toggle="tooltip" aria-describedby="_stateStatus" />
+      <span data-th-classappend="${#fields.hasErrors('_state')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('_state')}" aria-hidden="true"></span>
+      <span id="_state-error" class="help-block" data-th-if="${#fields.hasErrors('_state')}" data-th-errors="*{_state}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="1ec0cb75" id="address-country-field" data-th-classappend="${#fields.hasErrors('country')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="country" class="col-md-3 control-label" data-th-text="#{label_address_country}">country</label>
+  <div class="col-md-6">
+    <input id="country" name="country" data-th-value="*{{country}}" type="text" class="form-control" placeholder="country" data-th-placeholder="#{label_address_country}" data-toggle="tooltip" aria-describedby="countryStatus" />
+      <span data-th-classappend="${#fields.hasErrors('country')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('country')}" aria-hidden="true"></span>
+      <span id="country-error" class="help-block" data-th-if="${#fields.hasErrors('country')}" data-th-errors="*{country}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="61d20bc9" id="address-postcode-field" data-th-classappend="${#fields.hasErrors('postCode')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="postCode" class="col-md-3 control-label" data-th-text="#{label_address_postcode}">postCode</label>
+  <div class="col-md-6">
+    <input id="postCode" name="postCode" data-th-value="*{{postCode}}" type="text" class="form-control" placeholder="postCode" data-th-placeholder="#{label_address_postcode}" data-toggle="tooltip" aria-describedby="postCodeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('postCode')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('postCode')}" aria-hidden="true"></span>
+      <span id="postCode-error" class="help-block" data-th-if="${#fields.hasErrors('postCode')}" data-th-errors="*{postCode}">Error message.</span>
+  </div>
+</div>
+            </fieldset>
+
+
+              <!-- buttons form -->
+              <div class="form-group">
+                <div class="col-md-9 col-md-offset-3">
+                    <button type="submit" class="btn btn-primary" data-th-text="#{label_save}">Save</button>
+                    <button type="reset" class="btn btn-default" onclick="location.href='list.html'" data-th-onclick="'location.href=\'' + @{${collectionLink.to('list')}} + '\''" data-th-text="#{label_reset}">Cancel</button>
+                </div>
+              </div>
+
+          </form>
+          <!-- /FORM -->
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+
+    <!-- DateTimePicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js" data-th-src="@{/webjars/datetimepicker/build/jquery.datetimepicker.full.min.js}"></script>
+    <script src="../../static/public/js/datetimepicker-defaults.js" data-th-src="@{/public/js/datetimepicker-defaults.js}"></script>
+
+    <!-- jquery.inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.1/jquery.inputmask.bundle.min.js" data-th-src="@{/webjars/jquery.inputmask/min/jquery.inputmask.bundle.min.js}"></script>
+    <script type="text/javascript" data-th-inline="javascript">
+					(function(jQuery) {
+						jQuery(document)
+								.ready(
+										function() {
+											Inputmask
+													.extendAliases({
+														'numeric' : {
+															'groupSeparator' : /*[[#{label_inputmask_groupSeparator}]]*/'.',
+															'radixPoint' : /*[[#{label_inputmask_radixPoint}]]*/','
+														},
+														'currency' : {
+															'prefix' : /*[[#{label_inputmask_prefix}]]*/'',
+															'suffix' : /*[[#{label_inputmask_suffix}]]*/' €'
+														}
+													});
+										});
+					})(jQuery);
+  		</script>
+    <script src="../../static/public/js/inputmask-defaults.js" data-th-src="@{/public/js/inputmask-defaults.js}"></script>
+
+    <!-- JQuery Validation -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js" data-th-src="@{/webjars/jquery-validation/dist/jquery.validate.min.js}">
+		  </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js" data-th-src="@{/webjars/jquery-validation/dist/additional-methods.min.js}">
+			</script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/localization/messages_es.js" data-th-src="@{/webjars/jquery-validation/src/localization/messages_}+${#locale.language}+'.js'" data-th-if="${#locale.language} != 'en'">
+			</script>
+    <script src="../../static/public/js/validation-defaults.js" data-th-src="@{/public/js/validation-defaults.js}">
+			</script>
+
+    <script type="text/javascript" data-th-inline="javascript">
+					(function(jQuery) {
+						jQuery(document)
+								.ready(
+										function() {
+											jQuery
+													.extend(
+															jQuery.validator.messages,
+															{
+																'dateformat' : /*[[#{error_invalid_date}]]*/'Please enter a correct date/time',
+																'inputmask' : /*[[#{error_invalid_maskValue}]]*/'Please enter a valid value',
+															});
+										});
+					})(jQuery);
+		  </script>
+
+    </div>
+
+  </body>
+
+</html>

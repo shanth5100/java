@@ -3,21 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <title>Invoice</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"><!--  -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
-	<p style="text-align: center; font-family: serif; font-size: 16px; background-color: blue;"> <b>INVOICE</b> </p><br>
-	
-	<div class="container row">
-		<div>
-			<label>Invoive Date</label> <br>
-			<span th:text="*{cleientInfo.date}"></span>
+	<!-- <p style="text-align: center; font-family: serif; font-size: 16px; background-color: blue;"> <b>INVOICE</b> </p><br> -->
+	<br>
+	<div>
+		<div class="row">
+			<div class="col-sm-6">
+		      <p style="text-align: left; font-family: serif; font-size: 20px;"> <b> Geekspace Business Center </b> </p>
+		      	Plot No: 1204 <br>
+		       	Manjeera Trinity Corporate <br>
+		       	Kukatpally  <br>
+				Hyderabad <br>
+				Telangana, 500018
+		    </div>
+			<div class="col-sm-6">
+				<p style="text-align: right; font-family: serif; font-size: 20px;"> <b>INVOICE</b> </p><br>
+				<div class="row" >
+					<div class="col-sm-6"></div>
+					<div class="col-sm-6">
+						<div class="row" style="text-align:center; background-color: aqua;">
+							<div class="col-sm-6">
+								<span>Invoive Date</span>
+							</div>
+							<div class="col-sm-6">
+								<span>Invoive #</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" >
+					<div class="col-sm-6"></div>
+					<div class="col-sm-6">
+						<div class="row" style="text-align:center;">
+							<div class="col-sm-6">
+								<span>Invoice Date Dynamicly</span>
+							</div>
+							<div class="col-sm-6">
+								<span>Invoice Number Dynamicly</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		
 	</div> <br>
-	<div class="container">
+	
+	<div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="row" style="background-color: aqua;"> <span>BILL TO</span></div>
+		      <!-- <p style="text-align: left; font-family: serif; font-size: 20px;"> <b> Geekspace Business Center </b> </p> -->
+		      	Plot No: 1204 <br>
+		       	Manjeera Trinity Corporate <br>
+		       	Kukatpally  <br>
+				Hyderabad <br>
+				Telangana, 500018
+		    </div>
+			<div class="col-sm-6">
+				<div class="row"> 
+					<div class="row" >
+						<div class="col-sm-6"></div>
+						<div class="col-sm-6">
+							<div class="row" style="text-align:center; background-color: aqua;">
+								<div class="col-sm-6">
+									<span>Client ID</span>
+								</div>
+								<div class="col-sm-6">
+									<span>TERMS</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" >
+					<div class="col-sm-6"></div>
+					<div class="col-sm-6">
+						<div class="row" style="text-align:center;">
+							<div class="col-sm-6">
+								<span>Invoive Date</span>
+							</div>
+							<div class="col-sm-6">
+								<span>Invoive #</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div> <br>
+	
+		<table style="width: 100%;">
+			<thead style="background-color: highlight; color: green; padding-top: -20; text-align: left;"> 
+			
+				<tr>
+			      <th style="width: 60%;">Description</th>
+			      <th>Quantity</th>
+			      <th>Gst(%)</th>
+			      <th>Price</th>
+			    </tr>
+			</thead>
+			<tbody>
+				<tr >
+			      <td>ksn</td>
+			      <td>1</td>
+			      <td>18</td>
+			      <td>112380</td>
+			    </tr>
+			    <tr>
+			      <td>ksd</td>
+			      <td>1</td>
+			      <td>18</td>
+			      <td>112380</td>
+			    </tr>
+			    <tr>
+			      <td>ks</td>
+			      <td>1</td>
+			      <td>18</td>
+			      <td>112380</td>
+			    </tr>
+			    <tr>
+			      <td>k</td>
+			      <td>1</td>
+			      <td>18</td>
+			      <td>112380</td>
+			    </tr>
+			</tbody>
+			<tfoot>
+				<tr>
+			      <td></td>
+			      <td></td>
+			      <td>TotalTotalTotal</td>
+			      <td>18</td>
+			    </tr>
+			</tfoot>	
+		</table>
+		
+	<!-- <div class="container">
 		<div class="row">
 			<div class="col-sm-6">
 				<p style="font-size: 12"> <b>From</b> </p>
@@ -37,44 +163,11 @@
 				Telangana, 500018
 			</div>
 		</div>
-	  <!-- <div class="row">
-	    <div class="col-sm-4">
-	      <h3>Column 1</h3>
-	      <p>Lorem ipsum dolor..</p>
-	    </div>
-	    <div class="col-sm-4">
-	      <h3>Column 2</h3>
-	      <p>Lorem ipsum dolor..</p>
-	    </div>
-	    <div class="col-sm-4">
-	      <h3>Column 3</h3>
-	      <p>Lorem ipsum dolor..</p>
-	    </div>
-	  </div> -->
-	</div>
-	<!-- <div class="row">
-		<div class="col">
-			<p style="font-size: 12"> <b>To</b> </p>
-		</div>
-		<div class="col">
-			<p style="font-size: 12"> <b>To</b> </p>
-		</div>
 	</div> -->
 	
 	
-	
-	<form action="#">
-		<div class="row">
-			<label>Name</label>
-			<input type="text" > 
-		</div><br>
-		<div class="row">
-			<label>Email</label>
-			<input type="text"> 
-		</div><br>
-		
 		<!-- <button>Submit</button> -->
-	</form>
+	
 	<!-- <form method="post">
 		<div class="row">
 			<label>Name</label>

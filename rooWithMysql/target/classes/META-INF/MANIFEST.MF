@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: dev1
+Build-Jdk: 12.0.1
+Implementation-Title: demo
+Implementation-Version: 1.0.0.BUILD-SNAPSHOT
+Implementation-Vendor-Id: com.qwiqapp.demo
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://platform.spring.io/platform/demo/
+Created-By: Maven Integration for Eclipse
+

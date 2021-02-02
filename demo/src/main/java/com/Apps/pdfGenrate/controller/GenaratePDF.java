@@ -37,7 +37,7 @@ public class GenaratePDF extends HttpServlet {
 	
 	@PostMapping("/genaratePDF")
 	public String name(@ModelAttribute("clients") OurClients client, Model model, HttpServletRequest req) {
-		System.out.println("req.getAttributeNames : "+ req.getParameter("name1").toString());
+//		System.out.println("req.getAttributeNames : "+ req.getParameter("name1").toString());
 		System.out.println("req.getAttributeNames : "+ req.getParameterMap().containsKey("name1"));
 //		System.out.println(req.);
 		System.out.println("clients names : "+ client.getClient_name());
