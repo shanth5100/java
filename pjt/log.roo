@@ -1,0 +1,46 @@
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2021-01-28 16:36:53
+project setup --topLevelPackage com.roo.mulMod --projectName multiModule --multimodule STANDARD 
+module focus --moduleName model 
+jpa setup --provider HIBERNATE --database MYSQL --userName root --password qwiqapp124 --
+entity jpa --class ~.User
+entity jpa --class ~.User --entityName user --table uzer
+field string --fieldName name
+field string --fieldName email --notNull --unique 
+field string --fieldName password
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2021-01-29 12:57:33
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2021-02-24 15:42:38
+module focus --moduleName model 
+hint 
+jpa setup --provider HIBERNATE --database H2_IN_MEMORY --profile dev --force 
+module focus --moduleName repository 
+repository jpa --all 
+module focus --moduleName service-api 
+service --all
+module focus --moduleName application 
+module focus --moduleName application 
+hint
+hin
+hint
+web mvc setup 
+web mvc view setup --type THYMELEAF 
+web mvc templates setup --type THYMELEAF 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2021-02-25 13:14:58
+module focus --moduleName application 
+web mvc controller --all --responseType THYMELEAF --package ~.web
+module focus --moduleName model 
+entity jpa --class ~.Attachment
+field string fileName --notNull
+focus --class ~.User
+// [failed] field list --fieldName attachments --type ~.Attachment --cardinality ONE_TO_MANY --mappedBy user --fetch LAZY 
+field list --fieldName attachments --type ~.Attachment --cardinality ONE_TO_MANY --mappedBy uzer --fetch LAZY 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2021-02-25 15:13:31
+module focus --moduleName model 
+module focus --moduleName repository 
+repository jpa --all 
+module focus --moduleName service-api 
+service --all
+module focus --moduleName application 
+web mvc view setup --type THYMELEAF 
+web mvc controller --all --responseType THYMELEAF --package ~.web
+module focus --moduleName model 
+focus --class ~.Attachment

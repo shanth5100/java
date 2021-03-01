@@ -1,0 +1,298 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] multiModule                                                        [pom]
+[INFO] model                                                              [jar]
+[INFO] repository                                                         [jar]
+[INFO] integration                                                        [jar]
+[INFO] service.api                                                        [jar]
+[INFO] service.impl                                                       [jar]
+[INFO] application                                                        [war]
+[INFO] 
+[INFO] ---------------------< com.roo.mulmod:multimodule >---------------------
+[INFO] Building multiModule 1.0.0.BUILD-SNAPSHOT                          [1/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ multimodule ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ multimodule ---
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/pom.xml to /Users/dev1/.m2/repository/com/roo/mulmod/multimodule/1.0.0.BUILD-SNAPSHOT/multimodule-1.0.0.BUILD-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------------------< com.roo.mulmod:model >------------------------
+[INFO] Building model 1.0.0.BUILD-SNAPSHOT                                [2/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ model ---
+[INFO] Deleting /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/model/target
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:compile (default) @ model ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] incorrect classpath: /Users/dev1/.m2/repository/org/springframework/roo/org.springframework.roo.annotations/2.0.0.RELEASE/org.springframework.roo.annotations-2.0.0.RELEASE.pom
+	<unknown source file>:<no line information>
+
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ model ---
+[WARNING] No sources found skipping aspectJ compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ model ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/model/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/model/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ model ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ model ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/model/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ model ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ model ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ model ---
+[INFO] Building jar: /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/model/target/model-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ model ---
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/model/target/model-1.0.0.BUILD-SNAPSHOT.jar to /Users/dev1/.m2/repository/com/roo/mulmod/model/1.0.0.BUILD-SNAPSHOT/model-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/model/pom.xml to /Users/dev1/.m2/repository/com/roo/mulmod/model/1.0.0.BUILD-SNAPSHOT/model-1.0.0.BUILD-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------------------< com.roo.mulmod:repository >----------------------
+[INFO] Building repository 1.0.0.BUILD-SNAPSHOT                           [3/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ repository ---
+[INFO] Deleting /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/repository/target
+[INFO] 
+[INFO] --- querydsl-maven-plugin:4.1.4:jpa-export (generate-qtypes) @ repository ---
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:compile (default) @ repository ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] incorrect classpath: /Users/dev1/.m2/repository/org/springframework/roo/org.springframework.roo.annotations/2.0.0.RELEASE/org.springframework.roo.annotations-2.0.0.RELEASE.pom
+	<unknown source file>:<no line information>
+
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ repository ---
+[WARNING] No sources found skipping aspectJ compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ repository ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/repository/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/repository/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ repository ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ repository ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/repository/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ repository ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ repository ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ repository ---
+[INFO] Building jar: /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/repository/target/repository-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ repository ---
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/repository/target/repository-1.0.0.BUILD-SNAPSHOT.jar to /Users/dev1/.m2/repository/com/roo/mulmod/repository/1.0.0.BUILD-SNAPSHOT/repository-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/repository/pom.xml to /Users/dev1/.m2/repository/com/roo/mulmod/repository/1.0.0.BUILD-SNAPSHOT/repository-1.0.0.BUILD-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------------------< com.roo.mulmod:integration >---------------------
+[INFO] Building integration 1.0.0.BUILD-SNAPSHOT                          [4/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ integration ---
+[INFO] Deleting /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/integration/target
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:compile (default) @ integration ---
+[WARNING] No sources found skipping aspectJ compile
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ integration ---
+[WARNING] No sources found skipping aspectJ compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ integration ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/integration/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/integration/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ integration ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ integration ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/integration/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ integration ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ integration ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ integration ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/integration/target/integration-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ integration ---
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/integration/target/integration-1.0.0.BUILD-SNAPSHOT.jar to /Users/dev1/.m2/repository/com/roo/mulmod/integration/1.0.0.BUILD-SNAPSHOT/integration-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/integration/pom.xml to /Users/dev1/.m2/repository/com/roo/mulmod/integration/1.0.0.BUILD-SNAPSHOT/integration-1.0.0.BUILD-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------------------< com.roo.mulmod:service.api >---------------------
+[INFO] Building service.api 1.0.0.BUILD-SNAPSHOT                          [5/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ service.api ---
+[INFO] Deleting /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-api/target
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:compile (default) @ service.api ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] incorrect classpath: /Users/dev1/.m2/repository/org/springframework/roo/org.springframework.roo.annotations/2.0.0.RELEASE/org.springframework.roo.annotations-2.0.0.RELEASE.pom
+	<unknown source file>:<no line information>
+
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ service.api ---
+[WARNING] No sources found skipping aspectJ compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ service.api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-api/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-api/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ service.api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ service.api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-api/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ service.api ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ service.api ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ service.api ---
+[INFO] Building jar: /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-api/target/service.api-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ service.api ---
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-api/target/service.api-1.0.0.BUILD-SNAPSHOT.jar to /Users/dev1/.m2/repository/com/roo/mulmod/service.api/1.0.0.BUILD-SNAPSHOT/service.api-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-api/pom.xml to /Users/dev1/.m2/repository/com/roo/mulmod/service.api/1.0.0.BUILD-SNAPSHOT/service.api-1.0.0.BUILD-SNAPSHOT.pom
+[INFO] 
+[INFO] --------------------< com.roo.mulmod:service.impl >---------------------
+[INFO] Building service.impl 1.0.0.BUILD-SNAPSHOT                         [6/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ service.impl ---
+[INFO] Deleting /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-impl/target
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:compile (default) @ service.impl ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] incorrect classpath: /Users/dev1/.m2/repository/org/springframework/roo/org.springframework.roo.annotations/2.0.0.RELEASE/org.springframework.roo.annotations-2.0.0.RELEASE.pom
+	<unknown source file>:<no line information>
+
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ service.impl ---
+[WARNING] No sources found skipping aspectJ compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ service.impl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-impl/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-impl/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ service.impl ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ service.impl ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-impl/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ service.impl ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ service.impl ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ service.impl ---
+[INFO] Building jar: /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-impl/target/service.impl-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ service.impl ---
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-impl/target/service.impl-1.0.0.BUILD-SNAPSHOT.jar to /Users/dev1/.m2/repository/com/roo/mulmod/service.impl/1.0.0.BUILD-SNAPSHOT/service.impl-1.0.0.BUILD-SNAPSHOT.jar
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/service-impl/pom.xml to /Users/dev1/.m2/repository/com/roo/mulmod/service.impl/1.0.0.BUILD-SNAPSHOT/service.impl-1.0.0.BUILD-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------------------< com.roo.mulmod:application >---------------------
+[INFO] Building application 1.0.0.BUILD-SNAPSHOT                          [7/7]
+[INFO] --------------------------------[ war ]---------------------------------
+Downloading from spring-roo-repository: http://repo.spring.io/spring-roo/org/webjars/bower/datatables.net/maven-metadata.xml
+[WARNING] Could not transfer metadata org.webjars.bower:datatables.net/maven-metadata.xml from/to spring-roo-repository (http://repo.spring.io/spring-roo): Authorization failed for http://repo.spring.io/spring-roo/org/webjars/bower/datatables.net/maven-metadata.xml 403 Forbidden
+Downloading from spring-roo-repository: http://repo.spring.io/spring-roo/org/webjars/bower/mark.js/maven-metadata.xml
+[WARNING] Could not transfer metadata org.webjars.bower:mark.js/maven-metadata.xml from/to spring-roo-repository (http://repo.spring.io/spring-roo): Authorization failed for http://repo.spring.io/spring-roo/org/webjars/bower/mark.js/maven-metadata.xml 403 Forbidden
+Downloading from spring-roo-repository: http://repo.spring.io/spring-roo/org/webjars/bower/jquery-mousewheel/maven-metadata.xml
+[WARNING] Could not transfer metadata org.webjars.bower:jquery-mousewheel/maven-metadata.xml from/to spring-roo-repository (http://repo.spring.io/spring-roo): Authorization failed for http://repo.spring.io/spring-roo/org/webjars/bower/jquery-mousewheel/maven-metadata.xml 403 Forbidden
+Downloading from spring-roo-repository: http://repo.spring.io/spring-roo/org/webjars/bower/php-date-formatter/maven-metadata.xml
+[WARNING] Could not transfer metadata org.webjars.bower:php-date-formatter/maven-metadata.xml from/to spring-roo-repository (http://repo.spring.io/spring-roo): Authorization failed for http://repo.spring.io/spring-roo/org/webjars/bower/php-date-formatter/maven-metadata.xml 403 Forbidden
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ application ---
+[INFO] Deleting /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/application/target
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:compile (default) @ application ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] incorrect classpath: /Users/dev1/.m2/repository/org/springframework/roo/org.springframework.roo.annotations/2.0.0.RELEASE/org.springframework.roo.annotations-2.0.0.RELEASE.pom
+	<unknown source file>:<no line information>
+
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ application ---
+[WARNING] No sources found skipping aspectJ compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ application ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 69 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ application ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ application ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/application/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ application ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ application ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:2.6:war (default-war) @ application ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [application] in [/Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/application/target/application-1.0.0.BUILD-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [505 msecs]
+[INFO] Building war: /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/application/target/application-1.0.0.BUILD-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.4.1.RELEASE:repackage (default) @ application ---
+[INFO] Attaching archive: /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/application/target/application-1.0.0.BUILD-SNAPSHOT-exec.war, with classifier: exec
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ application ---
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/application/target/application-1.0.0.BUILD-SNAPSHOT.war to /Users/dev1/.m2/repository/com/roo/mulmod/application/1.0.0.BUILD-SNAPSHOT/application-1.0.0.BUILD-SNAPSHOT.war
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/application/pom.xml to /Users/dev1/.m2/repository/com/roo/mulmod/application/1.0.0.BUILD-SNAPSHOT/application-1.0.0.BUILD-SNAPSHOT.pom
+[INFO] Installing /Users/dev1/prashanth/java/java/Roo/ModularPjt/pjt/application/target/application-1.0.0.BUILD-SNAPSHOT-exec.war to /Users/dev1/.m2/repository/com/roo/mulmod/application/1.0.0.BUILD-SNAPSHOT/application-1.0.0.BUILD-SNAPSHOT-exec.war
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for multiModule 1.0.0.BUILD-SNAPSHOT:
+[INFO] 
+[INFO] multiModule ........................................ SUCCESS [  0.397 s]
+[INFO] model .............................................. SUCCESS [  2.732 s]
+[INFO] repository ......................................... SUCCESS [  1.387 s]
+[INFO] integration ........................................ SUCCESS [  0.084 s]
+[INFO] service.api ........................................ SUCCESS [  0.234 s]
+[INFO] service.impl ....................................... SUCCESS [  0.418 s]
+[INFO] application ........................................ SUCCESS [  9.506 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.088 s
+[INFO] Finished at: 2021-02-26T12:53:29+05:30
+[INFO] ------------------------------------------------------------------------
