@@ -45,7 +45,7 @@
 <div class="form-group has-error has-feedback" data-z="ae8b41f0" id="attachment-filecontent-field" data-th-classappend="${#fields.hasErrors('fileContent')}? 'has-error has-feedback'" data-th-class="form-group">
   <label for="fileContent" class="col-md-3 control-label" data-th-text="#{label_attachment_filecontent}">file</label>
   <div class="col-md-3">
-    <input type="file" name="file" class="form-control inputmask" data-th-value="*{{fileContent}}" data-toggle="tooltip" aria-describedby="fileContentStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" required="required"  />
+    <input type="file" name="file" class="form-control inputmask" data-th-value="*{{fileContent}}" data-toggle="tooltip" aria-describedby="fileContentStatus" required="required"  />
     <!-- <input id="fileContent" name="fileContent" data-th-value="*{{fileContent}}" type="file" class="form-control inputmask" placeholder="fileContent" data-th-placeholder="#{label_attachment_filecontent}" data-toggle="tooltip" aria-describedby="fileContentStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" required="required" /> -->
       <span data-th-classappend="${#fields.hasErrors('fileContent')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('fileContent')}" aria-hidden="true"></span>
       <span id="fileContent-error" class="help-block" data-th-if="${#fields.hasErrors('fileContent')}" data-th-errors="*{fileContent}">Error message.</span>
