@@ -316,17 +316,6 @@ privileged aspect AttachmentsCollectionThymeleafController_Roo_Thymeleaf {
      * @param model
      * @return ModelAndView
      */
-    @PostMapping(name = "create")
-    public ModelAndView AttachmentsCollectionThymeleafController.create(@Valid @ModelAttribute Attachment attachment, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            populateForm(model);
-            
-            return new ModelAndView("attachments/create");
-        }
-        Attachment newAttachment = getAttachmentService().save(attachment);
-        UriComponents showURI = getItemLink().to(AttachmentsItemThymeleafLinkFactory.SHOW).with("attachment", newAttachment.getId()).toUri();
-        return new ModelAndView("redirect:" + showURI.toUriString());
-    }
     
     /**
      * TODO Auto-generated method documentation

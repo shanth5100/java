@@ -47,11 +47,17 @@ privileged aspect AttachmentsCollectionThymeleafLinkFactory_Roo_LinkFactory {
      */
     public static final String AttachmentsCollectionThymeleafLinkFactory.CREATE = "create";
     
+    
+    public static final String AttachmentsCollectionThymeleafLinkFactory.CREATE1 = "create1";
+    
     /**
      * TODO Auto-generated attribute documentation
      * 
      */
     public static final String AttachmentsCollectionThymeleafLinkFactory.CREATEFORM = "createForm";
+
+
+    public static final String AttachmentsCollectionThymeleafLinkFactory.CREATEFORM1 = "createForm1";
     
     /**
      * TODO Auto-generated attribute documentation
@@ -107,11 +113,14 @@ privileged aspect AttachmentsCollectionThymeleafLinkFactory_Roo_LinkFactory {
         if (methodName.equals(SELECT2)) {
             return SpringletsMvcUriComponentsBuilder.fromMethodCall(SpringletsMvcUriComponentsBuilder.on(getControllerClass()).select2(null, null, null)).buildAndExpand(pathVariables);
         }
-        if (methodName.equals(CREATE)) {
-            return SpringletsMvcUriComponentsBuilder.fromMethodCall(SpringletsMvcUriComponentsBuilder.on(getControllerClass()).create(null, null, null)).buildAndExpand(pathVariables);
+        if(methodName.equals(CREATE1)) {
+            return SpringletsMvcUriComponentsBuilder.fromMethodCall(SpringletsMvcUriComponentsBuilder.on(getControllerClass()).addFileController(null, null, null, null)).buildAndExpand(pathVariables);
         }
         if (methodName.equals(CREATEFORM)) {
             return SpringletsMvcUriComponentsBuilder.fromMethodCall(SpringletsMvcUriComponentsBuilder.on(getControllerClass()).createForm(null)).buildAndExpand(pathVariables);
+        }
+        if (methodName.equals(CREATEFORM1)) {
+            return SpringletsMvcUriComponentsBuilder.fromMethodCall(SpringletsMvcUriComponentsBuilder.on(getControllerClass()).addFileView(null)).buildAndExpand(pathVariables);
         }
         if (methodName.equals(DELETEBATCH)) {
             return SpringletsMvcUriComponentsBuilder.fromMethodCall(SpringletsMvcUriComponentsBuilder.on(getControllerClass()).deleteBatch(null)).buildAndExpand(pathVariables);
